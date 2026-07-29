@@ -1,11 +1,17 @@
 // Input: a string
-// Output: the string without its first and last character
-// Returns: a string
- 
-function removeFirstAndLast(str) {
-  // TODO: slice out the middle portion of the string
-  return str.slice(1,-1);
- 
+// Output: true or false
+// Returns: a boolean
+
+function isPalindrome(str) {
+    // TODO: reverse the string and compare it to the original
+    revStr = str.split('').reverse().join('');
+    if (str === revStr) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
- 
-console.log(removeFirstAndLast("helllo")); // Expected: "ell"
+
+console.log(isPalindrome("level")); // Expected: true
+console.log(isPalindrome("hello")); // Expected: false
